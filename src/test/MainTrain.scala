@@ -6,33 +6,33 @@ object MainTrain {
     val nums: List[Int] = List(1, 2, 3, 4)
     if (Util.max(nums, (x: Int, y: Int) => x - y) != 4)
       println("max does not return the max value  for list of ints(-5)")
+    println(nums.count(_==2))
+    val names: List[String] = List("Hello", "World", "Scala", "JVM", "Functional", "Programming")
+    if (!Util.max(names, (x: String, y: String) => x.compareTo(y)).equals("World"))
+      println("max does not return the max value  for list of strings(-5)")
 
-    //    val names:List[String]= List("Hello","World","Scala","JVM","Functional","Programming")
-    //    if(!Util.max(names,(x:String,y:String)=>x.compareTo(y)).equals("World"))
-    //      println("max does not return the max value  for list of strings(-5)")
-    //
-    //
-    //    var students = Util.map(nums,(x:Int)=>x*2,(y:Int)=>"student "+y)
-    //    var b=true
-    //    var i=0
-    //    students.foreach(s=>{
-    //      i+=2
-    //      if(!s.equals("student "+i))
-    //        b=false
-    //    })
-    //    if(!b)
-    //      println("map does not return a correct list (-5)")
-    //
-    //    if(!Util.isSorted(nums,(x:Int,y:Int)=>x<=y))
-    //      println("wrong result for isSorted (-5)")
-    //    if(Util.isSorted(nums,(x:Int,y:Int)=>x>=y))
-    //      println("wrong result for isSorted (-5)")
-    //
-    //    val vs=Array(14.0,14.0,1.0,2.0) // values
-    //    val ps=Array(0.5,0.5,0.25,0.25) // probabilities
-    //    if(!Util.probs(vs).sameElements(ps))
-    //      println("wrong probabilities returned (-5)")
-    //
+
+        var students = Util.map(nums,(x:Int)=>x*2,(y:Int)=>"student "+y)
+        var b=true
+        var i=0
+        students.foreach(s=>{
+          i+=2
+          if(!s.equals("student "+i))
+            b=false
+        })
+        if(!b)
+          println("map does not return a correct list (-5)")
+
+        if(!Util.isSorted(nums,(x:Int,y:Int)=>x<=y))
+          println("wrong result for isSorted (-5)")
+        if(Util.isSorted(nums,(x:Int,y:Int)=>x>=y))
+          println("wrong result for isSorted (-5)")
+
+        val vs=Array(14.0,14.0,1.0,2.0) // values
+        val ps=Array(0.5,0.5,0.25,0.25) // probabilities
+        if(!Util.probs(vs).sameElements(ps))
+          println("wrong probabilities returned (-5)")
+
     //
     //    var xs = Array(1.0,2.0,3.0,4.0,5.0,6.0)
     //
@@ -98,3 +98,4 @@ object MainTrain {
     //    println("done")
     //  }
   }
+}
